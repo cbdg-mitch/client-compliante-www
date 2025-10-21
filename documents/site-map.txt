@@ -1,0 +1,167 @@
+
+Visual Sitemap — Compliant Solutions Website Top-Level Navigation
+Home | Services | Partners | About | Contact
+
+1. Home
+
+Purpose:
+
+ High-impact introduction to Compliant Solutions as a full-service healthcare partner.
+Sections:
+
+* Hero Banner
+    * Headline: "Your Complete Healthcare Business Partner"
+    * Subhead: "Compliance • Risk • Revenue • Innovation"
+    * CTA: Request a Practice Analysis
+* Three Pillars (Cards): Compliance | Revenue Optimization | Risk Management
+* Innovation Partners Band (logos + short descriptors)
+* Proof/Trust Section (years in business, HIPAA compliance, provider types served)
+* CTA Band: "Let’s Start Strengthening Your Practice"
+
+
+2. Services (Overview)
+
+Purpose:
+
+ Summarize three primary service areas with cards linking to detail pages.
+Sections:
+
+* Intro paragraph about aligning compliance, risk, and financial performance.
+* Service Cards:
+    * Regulatory Compliance – HIPAA, policy development, training.
+    * Revenue Optimization – Billing, RCM, claims recovery.
+    * Risk Management – Operational and regulatory risk mitigation.
+* CTA Band linking to Contact.
+
+Template Reuse: Service cards and layout blocks reused across homepage and detail pages.
+
+3. Service Detail Pages
+
+Each follows a consistent Elementor template.
+
+Compliance
+
+* Hero: "Healthcare Compliance Solutions"
+* Overview paragraph.
+* Key Focus Areas (4 columns):
+    * Risk Management & Assessments
+    * HIPAA Compliance Solutions
+    * Policy & Procedure Development
+    * Staff Training Programs
+* CTA Band.
+
+Revenue Optimization
+
+* Hero: "Revenue Optimization for Healthcare"
+* Key Focus Areas:
+    * Revenue Cycle Management
+    * Billing Process Optimization
+    * Claims Management & Recovery
+    * Financial Performance Analytics
+* CTA Band.
+
+Risk Management
+
+* Hero: "Comprehensive Risk Mitigation"
+* Key Focus Areas:
+    * Operational Risk Assessment
+    * Financial Risk Mitigation
+    * Regulatory Risk Analysis
+    * Business Continuity Planning
+* CTA Band.
+
+
+4. Partners (Overview)
+
+Purpose:
+
+ Display trusted innovation partners and their solutions.
+Sections:
+
+* Intro paragraph about partnerships driving better patient outcomes.
+* Grid of partner logos + one-line descriptions:
+    * AlzBetter – Dementia care technology.
+    * SmartFit – Brain health and cognitive fitness.
+    * Healthy Blue Lighting – Circadian lighting for seniors.
+    * Rudio – Advanced cybersecurity solutions.
+* CTA Band: "Explore Our Innovation Partners."
+
+
+5. Partner Detail Pages (x4)
+
+Consistent Elementor template with logo, overview, benefits, and CTA.
+
+Template Structure:
+
+* Partner Logo + Header Banner
+* Overview paragraph
+* 4 Key Benefits (icon list)
+* Optional Testimonials / Outcomes band
+* CTA Band
+
+Examples:
+
+* AlzBetter: Advanced Dementia Training, Care Provider Tools & Technology, Multi-Level Skill Enhancement, Integrated Care Solutions.
+* SmartFit: Cognitive-Physical Integration, Memory Enhancement, Executive Function Improvement, Real-Life Transfer.
+* Healthy Blue Lighting: Circadian Rhythm Support, Patient Wellbeing, Staff Productivity, Smart Controls.
+* Rudio: GDPR Compliance, ISO 27001, AI-Powered Threat Detection, 24/7 Monitoring.
+
+
+6. About
+
+Purpose:
+
+ Communicate credibility, experience, and leadership.
+Sections:
+
+* Overview paragraph on company mission and philosophy.
+* Leadership Profiles:
+    * Charlotte H. Lowder – Risk Management & Marketing Specialist (ARM)
+    * Robert W. Lowder – Compliance & Cybersecurity Expert
+* Optional section: Timeline or “25+ Years in Healthcare Innovation.”
+
+
+7. Contact
+
+Purpose:
+
+ Drive inquiries and conversions.
+Sections:
+
+* Simple form (Name, Email, Message, Interest Dropdown)
+* Address & Phone
+* Secondary CTA: Request a Practice Analysis
+* Success confirmation message
+
+
+8. Footer
+
+* Copyright © 2025 Compliant Solutions Inc.
+* Partner mentions (SmartFit | AlzBetter | Healthy Senior Lighting)
+* Tagline: “Complete Privacy and Security Management for the Health, Insurance, and Financial Industries.”
+* LinkedIn icon
+
+
+Template & Component Map
+
+* Global Header/Footer (Elementor Theme Builder)
+* Service Template (used for 3 pages)
+* Partner Template (used for 4 pages)
+* CTA Section (global reusable block)
+* Trust/Proof Band (global reusable block)
+* Contact Form Section (global reusable block)
+
+
+Color & Typography Implementation
+
+* Primary: Trust Blue (#1C4E80) — Headers, buttons, accents.
+* Secondary: Healing Teal (#3CAEA3) — Icons, highlights.
+* Accent: Soft Lavender (#C6B9E0) — Care-related visuals.
+* Background: Warm Gray (#F4F5F7)
+* Text: Slate Gray (#4A4A4A)
+
+Fonts:
+
+* Headings: Lato (Bold, SemiBold)
+* Body: Inter or Nunito Sans (Regular, Medium)
+

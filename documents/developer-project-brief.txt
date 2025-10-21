@@ -1,0 +1,198 @@
+Developer PROJECT BRIEF
+Overview
+
+Rebuild Compliant Solutions’ website (Current site: https://compliantesolutions.com/) in WordPress using Elementor Pro, positioning the brand as a complete healthcare business partner. The site will highlight expertise across regulatory compliance, revenue optimization, and risk management — while also featuring trusted innovation partners (SmartFit, AlzBetter, Healthy Blue Lighting, Rudio).
+Focus: Professional, trustworthy, and modern healthcare design; clear value communication; modular Elementor layout for easy future updates.
+
+Staging site: e8264503df.nxcli.io
+user:   a943dcca_admin
+pass:   Chaos83Cakes35Pilaf65Myna73
+
+🔩 Technical Stack & Requirements
+
+* Platform: WordPress (latest stable version)
+* Builder: Elementor Pro (global theme styles + reusable templates)
+* Theme Base: Hello Elementor or lightweight equivalent
+* Hosting: Client-managed (GoDaddy → will migrate to WordPress host)
+* Integrations:
+    * WPForms (or Elementor Form) with Google reCAPTCHA
+    * Cloudflare CDN + SSL
+    * RankMath SEO or SEOPress
+    * WP Rocket / FlyingPress for caching
+* Performance Goals:
+    * Core Web Vitals passing
+    * PageSpeed 85+ desktop / 70+ mobile minimum
+
+
+🎨 Brand Colors & Design Language
+
+Primary Palette — Trust + Healing
+
+
+Tone
+	Color Name
+	HEX
+	Usage
+
+Primary
+	Trust Blue
+	#1C4E80
+	Headers, buttons, key accents
+
+Secondary
+	Healing Teal
+	#3CAEA3
+	Icons, hover states, subheadings
+
+Accent 1
+	Soft Lavender
+	#C6B9E0
+	Highlights, wellness-related sections
+
+Accent 2
+	Warm Gray
+	#F4F5F7
+	Backgrounds, section dividers
+
+Support
+	Slate Gray
+	#4A4A4A
+	Body text, icons, muted outlines
+
+
+Visual Mood: Trustworthy • Compassionate • Intelligent
+Style Direction: Light and clean; high whitespace; subtle gradients or cards; modern sans-serif typography (e.g., Inter, Lato, or Nunito Sans).
+Imagery: Diverse healthcare and senior care visuals, showing teamwork, compassion, and technology in action.
+
+🧱 Site Architecture & Page Structure
+
+1. Home
+
+Purpose: Introduce full-scope partnership — Compliance, Risk, Revenue, and Innovation.
+Sections:
+
+* Hero headline: “Your Complete Healthcare Business Partner.”
+     Subhead: “Compliance • Risk • Revenue • Innovation.”
+     CTA: “Request a Practice Analysis” → Contact form anchor.
+* 3-column “Core Strengths” (Compliance, Revenue Optimization, Risk Management).
+* “Innovation Partners” carousel with logos (SmartFit, AlzBetter, Healthy Blue Lighting, Rudio).
+* Trust band with concise proof statements (“20+ years of experience,” “Trusted by SNFs & CCRCs,” “HIPAA-certified experts”).
+* Contact CTA banner.
+
+
+2. Services (Overview)
+
+Purpose: Present three service pillars clearly, each with preview and Learn More link.
+
+* Regulatory Compliance
+* Revenue Optimization
+* Risk Management
+
+Each card includes icon, summary paragraph, and CTA → detail page.
+
+3. Service Detail Pages
+
+Each service (Compliance, Revenue Optimization, Risk Management) gets its own layout template for clarity and scalability.
+Layout pattern:
+
+* Header banner with service name
+* Short summary paragraph
+* “Key Focus Areas” in bullet grid (4 items per service from doc)
+* CTA band (“Schedule a Consultation”)
+
+Example – Compliance:
+
+* Risk Management & Assessments
+* HIPAA Compliance Solutions
+* Policy & Procedure Development
+* Staff Training Programs
+
+Example – Revenue Optimization:
+
+* Revenue Cycle Management
+* Billing Process Optimization
+* Claims Management & Recovery
+* Financial Performance Analytics
+
+Example – Risk Management:
+
+* Operational Risk Assessment
+* Financial Risk Mitigation
+* Regulatory Risk Analysis
+* Business Continuity Planning
+
+
+4. Partners (Overview)
+
+Purpose: Show trusted partnerships that expand Compliant Solutions’ innovation reach.
+ Grid or logo band with one-line descriptors under each:
+
+* AlzBetter: Technology-enabled dementia care solutions.
+* SmartFit: Brain health and cognitive fitness programs.
+* Healthy Blue Lighting: Innovative circadian lighting solutions for seniors.
+* Rudio: Advanced cybersecurity solutions.
+
+CTA below: “Explore Our Innovation Partners.”
+
+5. Partner Detail Pages (x4)
+
+Each partner gets its own structured layout:
+Layout pattern:
+
+* Partner logo + hero headline
+* 1-paragraph overview
+* 4-bullet benefit list (from doc)
+* Optional testimonial / “Proven Outcomes” section
+* CTA banner (“Learn how this technology fits your practice”)
+
+Examples:
+
+* AlzBetter: Advanced Dementia Training, Care Provider Tools & Technology, Multi-Level Skill Enhancement, Integrated Care Solutions.
+* SmartFit: Cognitive-Physical Training Integration, Memory & Attention Enhancement, Executive Function Improvement, Real-Life Performance Transfer.
+* Healthy Blue Lighting: Circadian Rhythm Support, Patient Wellbeing Enhancement, Staff Productivity Optimization, Smart Control Systems.
+* Rudio: GDPR Compliant Solutions, ISO 27001, AI-Powered Threat Detection, 24/7 Incident Monitoring.
+
+
+6. About
+
+Purpose: Establish credibility and leadership background.
+ Sections:
+
+* Who We Are — mission summary paragraph.
+* Leadership profiles:
+    * Charlotte H. Lowder – Risk Management & Marketing Specialist (ARM)
+    * Robert W. Lowder – Compliance & Cybersecurity Expert
+         Each with LinkedIn links and short bios from the doc.
+* Optional small timeline or “25+ Years in Healthcare Innovation” band.
+
+
+7. Contact
+
+* Contact form with name, email, message, and optional dropdown (“Service Area of Interest”).
+* Address and phone number.
+* Secondary CTA: “Request a Practice Analysis.”
+
+
+8. Footer
+
+Content:
+ © 2025 Compliant Solutions Inc. All rights reserved. | SmartFit | AlzBetter | Healthy Senior Lighting
+ Tagline: “Complete Privacy and Security Management for the Health, Insurance, and Financial Industries.”
+ Social icons (LinkedIn).
+
+⚙️ Functionality & Standards
+
+* Navigation:
+    * Home | Services | Partners | About | Contact
+    * Dropdown under Services (3 subpages).
+    * Dropdown under Partners (4 subpages).
+* Global Templates:
+    * Header & Footer
+    * Single Service Page
+    * Single Partner Page
+    * Reusable CTA section
+    * Contact form band
+* SEO & Metadata:
+    * Each page titled using high-intent keywords (e.g., “Healthcare Compliance & HIPAA Consulting | Compliant Solutions”).
+    * Partner pages: include innovation-specific keywords (e.g., “SmartFit brain health program,” “dementia care technology AlzBetter,” “circadian lighting for seniors,” “cybersecurity for healthcare”).
+

@@ -1,0 +1,41 @@
+[
+  {
+    "slug": "compliance",
+    "title": "Regulatory Compliance",
+    "summary": "Reduce audit risk and stay inspection-ready with practical programs that align policy, training, and oversight across your organization.",
+    "bullets": [
+      "Risk Management & Assessments",
+      "HIPAA Compliance Solutions",
+      "Policy & Procedure Development",
+      "Staff Training Programs"
+    ],
+    "seoTitle": "Healthcare Regulatory Compliance Consulting | Compliante Solutions",
+    "seoDescription": "HIPAA/CMS-aligned assessments, policies, training, and oversight that keep providers inspection-ready and reduce audit exposure."
+  },
+  {
+    "slug": "revenue-optimization",
+    "title": "Revenue Optimization",
+    "summary": "Capture missed revenue and strengthen cash flow by streamlining RCM workflows, improving billing accuracy, and accelerating claims recovery.",
+    "bullets": [
+      "Revenue Cycle Management",
+      "Billing Process Optimization",
+      "Claims Management & Recovery",
+      "Financial Performance Analytics"
+    ],
+    "seoTitle": "Revenue Optimization for Healthcare | Compliante Solutions",
+    "seoDescription": "RCM, billing optimization, claims recovery, and analytics to improve financial performance for providers and senior living organizations."
+  },
+  {
+    "slug": "risk-management",
+    "title": "Risk Management",
+    "summary": "Identify and mitigate operational, financial, and regulatory risks while building continuity plans that protect daily operations.",
+    "bullets": [
+      "Operational Risk Assessment",
+      "Financial Risk Mitigation",
+      "Regulatory Risk Analysis",
+      "Business Continuity Planning"
+    ],
+    "seoTitle": "Healthcare Risk Management Consulting | Compliante Solutions",
+    "seoDescription": "Comprehensive risk identification and mitigation strategies to protect operations, finances, and regulatory posture."
+  }
+]

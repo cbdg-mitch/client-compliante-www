@@ -1,0 +1,58 @@
+[
+  {
+    "slug": "alzbetter",
+    "name": "AlzBetter",
+    "tagline": "Technology-enabled dementia care solutions",
+    "bullets": [
+      "Advanced Dementia Training",
+      "Care Provider Tools & Technology",
+      "Multi-Level Skill Enhancement",
+      "Integrated Care Solutions"
+    ],
+    "logo": "/images/partners/alzbetter-logo.png",
+    "seoTitle": "AlzBetter Dementia Care Technology | Compliante Solutions Partner",
+    "seoDescription": "Advanced dementia care solutions through AlzBetter's technology platform. Enhanced training and integrated care tools for healthcare providers."
+  },
+  {
+    "slug": "smartfit",
+    "name": "SmartFit",
+    "tagline": "Brain health and cognitive fitness programs",
+    "bullets": [
+      "Cognitive-Physical Training Integration",
+      "Memory & Attention Enhancement",
+      "Executive Function Improvement",
+      "Real-Life Performance Transfer"
+    ],
+    "logo": "/images/partners/smartfit-logo.png",
+    "seoTitle": "SmartFit Brain Health Programs | Compliante Solutions Partner",
+    "seoDescription": "Innovative brain health and cognitive fitness programs through SmartFit. Integrated physical and cognitive training for better outcomes."
+  },
+  {
+    "slug": "healthy-senior-lighting",
+    "name": "Healthy Senior Lighting",
+    "tagline": "Innovative circadian lighting solutions for seniors",
+    "bullets": [
+      "Circadian Rhythm Support",
+      "Patient Wellbeing Enhancement",
+      "Staff Productivity Optimization",
+      "Smart Control Systems"
+    ],
+    "logo": "/images/partners/awaken-blue-logo.png",
+    "seoTitle": "Healthy Senior Lighting Circadian Solutions | Compliante Solutions Partner",
+    "seoDescription": "Advanced circadian lighting solutions for senior care facilities. Improve patient wellbeing and staff productivity with smart lighting technology."
+  },
+  {
+    "slug": "rudio",
+    "name": "Rudio",
+    "tagline": "Advanced cybersecurity solutions",
+    "bullets": [
+      "GDPR Compliant Solutions",
+      "ISO 27001 Certification",
+      "AI-Powered Threat Detection",
+      "24/7 Incident Monitoring"
+    ],
+    "logo": "/images/partners/rudio-logo.png",
+    "seoTitle": "Rudio Healthcare Cybersecurity | Compliante Solutions Partner",
+    "seoDescription": "Advanced cybersecurity solutions for healthcare through Rudio. GDPR compliance, AI threat detection, and 24/7 monitoring."
+  }
+]
