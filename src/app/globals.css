@@ -24,13 +24,29 @@
 }
 
 @theme inline {
+  /* Base semantic colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  /* Brand tokens (Tailwind v4 generates classes like bg-brand-primary, text-brand-secondary) */
+  --color-brand-primary: var(--color-primary);
+  --color-brand-secondary: var(--color-secondary);
+  --color-brand-accent1: var(--color-accent1);
+  --color-brand-text: var(--color-text);
+
+  /* Surface tokens (bg-surface, border-surface-border, bg-surface-muted) */
+  --color-surface: var(--card-bg);
+  --color-surface-border: var(--card-border);
+  --color-surface-muted: var(--muted-bg);
+
+  /* Legacy/direct tokens (kept for any existing uses like bg-primary) */
   --color-primary: var(--color-primary);
   --color-secondary: var(--color-secondary);
   --color-accent: var(--color-accent1);
   --color-gray-50: var(--color-bg);
   --color-gray-600: var(--color-text);
+
+  /* Fonts */
   --font-sans: var(--font-inter);
   --font-heading: var(--font-lato);
 }
