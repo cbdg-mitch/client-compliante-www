@@ -8,7 +8,7 @@ import path from "node:path";
 import { cache } from "react";
 
 export type ServiceSlug = "compliance" | "revenue-optimization" | "risk-management";
-export type PartnerSlug = "alzbetter" | "smartfit" | "healthy-senior-lighting" | "rudio";
+export type PartnerSlug = "alzbetter" | "smartfit" | "healthy-blue-lighting" | "rudio";
 
 export type Service = {
   slug: ServiceSlug;

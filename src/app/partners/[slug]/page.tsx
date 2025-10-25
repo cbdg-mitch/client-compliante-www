@@ -56,7 +56,7 @@ export default async function PartnerPage({
     description: partner.tagline,
     partner: {
       "@type": "Organization",
-      name: "Compliante Solutions, Inc.",
+      name: "Compliante Solutions Inc.",
       url: "https://compliantesolutions.com",
     },
   };
@@ -140,7 +140,7 @@ export default async function PartnerPage({
                 />
               );
             }
-            if (partner.slug === "healthy-senior-lighting") {
+            if (partner.slug === "healthy-blue-lighting") {
               return (
                 <FeatureSection
                   title="Where it fits"

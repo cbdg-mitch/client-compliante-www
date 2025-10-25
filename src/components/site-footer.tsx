@@ -46,8 +46,8 @@ export function SiteFooter() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/partners/healthy-senior-lighting" className="text-brand-text hover:text-brand-primary transition-colors">
-                    Healthy Senior Lighting
+                  <Link href="/partners/healthy-blue-lighting" className="text-brand-text hover:text-brand-primary transition-colors">
+                    Healthy Blue Lighting
                   </Link>
                 </li>
               </ul>
@@ -65,6 +65,11 @@ export function SiteFooter() {
                 <li>
                   <Link href="/contact" className="text-brand-text hover:text-brand-primary transition-colors">
                     Contact
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/resources" className="text-brand-text hover:text-brand-primary transition-colors">
+                    Resources
                   </Link>
                 </li>
                 <li>

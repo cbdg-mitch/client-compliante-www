@@ -24,10 +24,11 @@ const navigation = [
     children: [
       { name: "AlzBetter", href: "/partners/alzbetter" },
       { name: "SmartFit", href: "/partners/smartfit" },
-      { name: "Healthy Senior Lighting", href: "/partners/healthy-senior-lighting" },
+      { name: "Healthy Blue Lighting", href: "/partners/healthy-blue-lighting" },
       { name: "Rudio", href: "/partners/rudio" },
     ],
   },
+  { name: "Resources", href: "/resources" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
 ];

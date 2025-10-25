@@ -8,10 +8,17 @@ import { TrustBand } from "@/components/trust-band";
 import { PartnerCard } from "@/components/partner-card";
 import { CTA } from "@/components/cta";
 import { Testimonials } from "@/components/testimonials";
-import { Values } from "@/components/values";
-import { FeatureSection } from "@/components/feature-section";
+import { WhoWeServe } from "@/components/who-we-serve";
 import { getPartners, getTestimonials } from "@/lib/content";
 import { Shield, TrendingUp, AlertTriangle } from "lucide-react";
+import type { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Your Complete Healthcare Business Partner",
+    description: "Compliance • Risk • Revenue • Innovation. Expert, pragmatic programs that reduce findings, improve coding quality, and strengthen financial performance.",
+  };
+}
 
 const pillars = [
   {
@@ -44,7 +51,7 @@ export default async function HomePage() {
     <>
       <Hero
         title="Your Complete Healthcare Business Partner"
-        subtitle="Compliance & Risk. Revenue & Performance. Innovation that moves the needle."
+        subtitle="Compliance • Risk • Revenue • Innovation"
         support="Trusted by SNFs, CCRCs, and healthcare organizations nationwide"
         ctaPrimary={{
           text: "Request a Practice Analysis",
@@ -55,8 +62,6 @@ export default async function HomePage() {
           href: "/services",
         }}
       />
-
-      <TrustBand />
 
       {/* Three Pillars */}
       <Section>
@@ -90,24 +95,11 @@ export default async function HomePage() {
         </Container>
       </Section>
 
-      <Values />
+      {/* Who We Serve */}
+      <WhoWeServe />
 
-      {/* Story section with imagery */}
-      <Section>
-        <Container>
-          <FeatureSection
-            title="From compliance to performance"
-            body="We align compliance, risk, and revenue operations into one operating model. The result is fewer findings, faster documentation cycles, and better financial outcomes—without burnout."
-            imageSrc="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=1200&auto=format&fit=crop"
-            imageAlt="Healthcare team collaborating"
-            bullets={[
-              "Decrease audit findings and rework",
-              "Tighten documentation and coding",
-              "Operationalize best practices across teams",
-            ]}
-          />
-        </Container>
-      </Section>
+      {/* Proof/Trust */}
+      <TrustBand />
 
       {/* Testimonials */}
       <Section className="bg-white border-t border-brand-primary/10">

@@ -23,7 +23,7 @@ test.describe('Homepage', () => {
     
     await expect(page.getByText('AlzBetter')).toBeVisible();
     await expect(page.getByText('SmartFit')).toBeVisible();
-    await expect(page.getByText('Healthy Senior Lighting')).toBeVisible();
+  await expect(page.getByText('Healthy Blue Lighting')).toBeVisible();
     await expect(page.getByText('Rudio')).toBeVisible();
   });
 });

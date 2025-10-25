@@ -1,0 +1,40 @@
+{
+  "homeHero": [
+    { "alt": "Care team reviewing compliance plan", "src": "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1920" },
+    { "alt": "Senior care clinicians collaborating", "src": "https://images.unsplash.com/photo-1584515933487-779824d29309?w=1920&q=80&auto=format" }
+  ],
+  "compliance": [
+    { "alt": "HIPAA training session", "src": "https://images.pexels.com/photos/3862125/pexels-photo-3862125.jpeg?auto=compress&cs=tinysrgb&w=1920" },
+    { "alt": "Medical records audit", "src": "https://images.pexels.com/photos/3184396/pexels-photo-3184396.jpeg?auto=compress&cs=tinysrgb&w=1920" }
+  ],
+  "revenue": [
+    { "alt": "Medical billing team", "src": "https://images.pexels.com/photos/8454514/pexels-photo-8454514.jpeg?auto=compress&cs=tinysrgb&w=1920" },
+    { "alt": "Revenue cycle analytics", "src": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&q=80&auto=format" }
+  ],
+  "risk": [
+    { "alt": "Healthcare risk management", "src": "https://images.pexels.com/photos/20296646/pexels-photo-20296646.jpeg?auto=compress&cs=tinysrgb&w=1920" },
+    { "alt": "Business continuity in hospital", "src": "https://images.unsplash.com/photo-1556157382-97eda2d62296?w=1920&q=80&auto=format" }
+  ],
+  "whoWeServe": [
+    { "alt": "Senior living community staff", "src": "https://images.pexels.com/photos/3714743/pexels-photo-3714743.jpeg?auto=compress&cs=tinysrgb&w=1920" },
+    { "alt": "Clinic team with patients", "src": "https://images.unsplash.com/photo-1584515933487-779824d29309?w=1920&q=80&auto=format" }
+  ],
+  "partners": {
+    "alzbetter": [
+      { "alt": "Dementia care family support", "src": "https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&w=1920" },
+      { "alt": "Memory care activities", "src": "https://images.unsplash.com/photo-1542382257-80dedb725088?w=1920&q=80&auto=format" }
+    ],
+    "smartfit": [
+      { "alt": "Cognitive motor training", "src": "https://images.pexels.com/photos/7672251/pexels-photo-7672251.jpeg?auto=compress&cs=tinysrgb&w=1920" },
+      { "alt": "Brain fitness exercise", "src": "https://images.unsplash.com/photo-1579758629938-03607ccdbaba?w=1920&q=80&auto=format" }
+    ],
+    "healthy-blue-lighting": [
+      { "alt": "Circadian lighting seniors", "src": "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1920" },
+      { "alt": "Senior living lighting design", "src": "https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&cs=tinysrgb&w=1920" }
+    ],
+    "rudio": [
+      { "alt": "Healthcare cybersecurity", "src": "https://images.pexels.com/photos/6772035/pexels-photo-6772035.jpeg?auto=compress&cs=tinysrgb&w=1920" },
+      { "alt": "NIST framework security screens", "src": "https://images.unsplash.com/photo-1556157382-97eda2d62296?w=1920&q=80&auto=format" }
+    ]
+  }
+}

@@ -98,3 +98,12 @@ jobs:
           SSH_USER: ${{ secrets.SSH_USER }}
         run: |
           ssh -i ~/.ssh/deploy_key $SSH_USER@$SSH_HOST "command -v pm2 >/dev/null 2>&1 && pm2 list | grep compliantesolutions-production || npx pm2 list | grep compliantesolutions-production"
+
+      - name: Post-deploy health check (production)
+        run: |
+          URL="https://compliantesolutions.com/api/health"
+          echo "Checking $URL ..."
+          # Try a few times in case the app is still booting
+          RESP=$(curl -fsS --max-time 15 --retry 5 --retry-delay 2 "$URL")
+          echo "$RESP"
+          echo "$RESP" | grep -q '"ok":true' && echo "Health check passed" || (echo "Health check failed" && exit 1)

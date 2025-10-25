@@ -1,0 +1,22 @@
+:root {
+  /* Compliante Solutions Brand Colors */
+  --color-primary: #1C4E80;   /* Trust Blue */
+  --color-secondary: #3CAEA3; /* Healing Teal */
+  --color-accent1: #C6B9E0;   /* Soft Lavender */
+  --color-bg: #F4F5F7;        /* Warm Gray */
+  --color-text: #4A4A4A;      /* Slate Gray */
+
+  /* Component tokens */
+  --btn-fg: #ffffff;
+  --btn-bg: var(--color-secondary);
+  --btn-bg-hover: #2e8e86; /* darkened teal */
+  --link: var(--color-primary);
+  --link-hover: #153a60; /* darkened primary */
+  --card-bg: #ffffff;
+  --card-border: #E6E8EB; /* subtle border */
+  --muted-bg: #F7F8FA;
+  
+  /* Next.js theme variables */
+  --background: #ffffff;
+  --foreground: var(--color-text);
+}

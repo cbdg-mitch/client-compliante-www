@@ -55,7 +55,7 @@ export default async function ServicePage({
     description: service.summary,
     provider: {
       "@type": "Organization",
-      name: "Compliante Solutions, Inc.",
+      name: "Compliante Solutions Inc.",
       url: "https://compliantesolutions.com",
     },
   };
