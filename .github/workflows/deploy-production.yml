@@ -4,6 +4,14 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: Git ref (branch, tag, or SHA) to deploy (optional)
+        required: false
+      reason:
+        description: Reason for manual run (optional)
+        required: false
 
 jobs:
   deploy:
