@@ -74,15 +74,15 @@ jobs:
             # Update symlink
             ln -sfn "$RELEASE_DIR" /srv/www/clients/compliantesolutions/prod/current
             
-            # Start/restart application with Doppler via PM2 (no global install required)
+            # Start application fresh with Doppler via PM2 (ensure new release CWD)
             cd /srv/www/clients/compliantesolutions/prod/current
             if command -v pm2 >/dev/null 2>&1; then
-              doppler run --token=${{ secrets.DOPPLER_TOKEN_PRD }} -- pm2 restart compliantesolutions-production || \
-              doppler run --token=${{ secrets.DOPPLER_TOKEN_PRD }} -- pm2 start npm --name compliantesolutions-production -- start
+              doppler run --token=${{ secrets.DOPPLER_TOKEN_PRD }} -- pm2 delete compliantesolutions-production || true
+              doppler run --token=${{ secrets.DOPPLER_TOKEN_PRD }} -- pm2 start npm --name compliantesolutions-production --cwd "$RELEASE_DIR" -- start
               pm2 save || true
             else
-              doppler run --token=${{ secrets.DOPPLER_TOKEN_PRD }} -- npx pm2 restart compliantesolutions-production || \
-              doppler run --token=${{ secrets.DOPPLER_TOKEN_PRD }} -- npx pm2 start npm --name compliantesolutions-production -- start
+              doppler run --token=${{ secrets.DOPPLER_TOKEN_PRD }} -- npx pm2 delete compliantesolutions-production || true
+              doppler run --token=${{ secrets.DOPPLER_TOKEN_PRD }} -- npx pm2 start npm --name compliantesolutions-production --cwd "$RELEASE_DIR" -- start
               npx pm2 save || true
             fi
             
