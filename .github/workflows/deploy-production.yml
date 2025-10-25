@@ -22,7 +22,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          ref: ${{ inputs.ref || '' }}
+          ref: ${{ github.event.inputs.ref || github.ref }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -69,22 +69,24 @@ jobs:
 
             # Install dependencies in release directory
             cd "$RELEASE_DIR"
-            npm ci --production
+            npm ci --omit=dev
             
             # Update symlink
             ln -sfn "$RELEASE_DIR" /srv/www/clients/compliantesolutions/prod/current
             
-            # Install/update PM2 if needed
-            if ! command -v pm2 &> /dev/null; then
-              npm install -g pm2
+            # Determine PM2 command (use npx if not installed globally)
+            if command -v pm2 >/dev/null 2>&1; then
+              PM2_CMD="pm2"
+            else
+              PM2_CMD="npx pm2"
             fi
-            
-            # Start/restart application with Doppler
+
+            # Start/restart application with Doppler via PM2
             cd /srv/www/clients/compliantesolutions/prod/current
-            doppler run --token=${{ secrets.DOPPLER_TOKEN_PRD }} --command="pm2 restart compliantesolutions-production || pm2 start npm --name compliantesolutions-production -- start"
+            doppler run --token=${{ secrets.DOPPLER_TOKEN_PRD }} --command="$PM2_CMD restart compliantesolutions-production || $PM2_CMD start npm --name compliantesolutions-production -- start"
             
             # Save PM2 process list
-            pm2 save
+            \$PM2_CMD save || true
             
             # Cleanup old releases (keep last 5)
             cd /srv/www/clients/compliantesolutions/prod/releases
