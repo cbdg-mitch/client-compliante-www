@@ -14,7 +14,7 @@ export default function PrivacyPage() {
       <Container>
         <Prose>
           <h1>Privacy Policy</h1>
-          <p className="text-sm text-gray-500">Last updated: October 21, 2025</p>
+          <p className="text-sm text-brand-text/70">Last updated: October 21, 2025</p>
 
           <h2>Introduction</h2>
           <p>

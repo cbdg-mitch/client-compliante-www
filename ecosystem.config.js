@@ -1,0 +1,40 @@
+module.exports = {
+  apps: [
+    {
+      name: 'compliantesolutions-staging',
+      cwd: '/srv/www/clients/compliantesolutions/stg/current',
+      script: 'npm',
+      args: 'start',
+      env: {
+        NODE_ENV: 'production',
+        PORT: 3001,
+      },
+      instances: 1,
+      exec_mode: 'cluster',
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '500M',
+      error_file: '/srv/www/clients/compliantesolutions/stg/logs/pm2-error.log',
+      out_file: '/srv/www/clients/compliantesolutions/stg/logs/pm2-out.log',
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+    },
+    {
+      name: 'compliantesolutions-production',
+      cwd: '/srv/www/clients/compliantesolutions/prod/current',
+      script: 'npm',
+      args: 'start',
+      env: {
+        NODE_ENV: 'production',
+        PORT: 3000,
+      },
+      instances: 2,
+      exec_mode: 'cluster',
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '500M',
+      error_file: '/srv/www/clients/compliantesolutions/prod/logs/pm2-error.log',
+      out_file: '/srv/www/clients/compliantesolutions/prod/logs/pm2-out.log',
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+    },
+  ],
+};

@@ -1,6 +1,8 @@
 import { Section } from "@/components/section";
 import { Container } from "@/components/container";
 import { CTA } from "@/components/cta";
+import { Values } from "@/components/values";
+import { FeatureSection } from "@/components/feature-section";
 import { Linkedin } from "lucide-react";
 import Image from "next/image";
 import type { Metadata } from "next";
@@ -14,19 +16,19 @@ export default function AboutPage() {
 
   return (
     <>
-      <Section className="bg-gradient-to-br from-primary/5 via-white to-secondary/5 py-20">
+      <Section className="bg-white border-b-4 border-brand-secondary py-20">
         <Container>
           <div className="max-w-3xl">
-            <h1 className="text-4xl font-bold tracking-tight text-primary sm:text-5xl font-heading">
+            <h1 className="text-4xl font-bold tracking-tight text-brand-primary sm:text-5xl font-heading">
               About Compliante Solutions
             </h1>
             <div className="mt-8 prose-lg">
-              <p className="text-xl text-gray-600 leading-relaxed">
+              <p className="text-xl text-brand-text leading-relaxed">
                 Compliante Solutions represents a comprehensive approach to healthcare business partnership. 
                 We understand that today&apos;s healthcare organizations face unprecedented challenges across 
                 compliance, risk management, and financial performance.
               </p>
-              <p className="mt-4 text-lg text-gray-600 leading-relaxed">
+              <p className="mt-4 text-lg text-brand-text leading-relaxed">
                 Our mission is simple: to serve as your complete healthcare business partner, providing 
                 the expertise and innovation you need to thrive in an increasingly complex environment.
               </p>
@@ -35,13 +37,27 @@ export default function AboutPage() {
         </Container>
       </Section>
 
+      <Values />
+
       <Section>
         <Container>
+          <FeatureSection
+            title="A partner you can rely on"
+            body="We’ve spent decades inside healthcare organizations, building processes and systems that teams can sustain. Our approach emphasizes enablement, transparency, and measurable outcomes."
+            imageSrc="https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=1200&auto=format&fit=crop"
+            imageAlt="Team collaboration"
+            bullets={["Enablement over dependency", "Clear roles and cadences", "Measurable outcomes"]}
+          />
+        </Container>
+      </Section>
+
+      <Section className="bg-gradient-to-br from-brand-primary/2 via-transparent to-brand-secondary/2">
+        <Container>
           <div className="mb-16 text-center">
-            <h2 className="text-3xl font-bold text-primary font-heading sm:text-4xl">
+            <h2 className="text-3xl font-bold text-brand-primary font-heading sm:text-4xl">
               Leadership Team
             </h2>
-            <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="mt-4 text-lg text-brand-text max-w-3xl mx-auto">
               Our leadership brings decades of combined experience in healthcare compliance, 
               risk management, and business operations.
             </p>
@@ -60,14 +76,14 @@ export default function AboutPage() {
                 />
               </div>
               <div>
-                <div className="inline-block px-4 py-1.5 bg-secondary/10 text-secondary text-sm font-semibold rounded-full mb-4">
+                <div className="inline-block px-4 py-1.5 bg-brand-secondary/10 text-brand-secondary text-sm font-semibold rounded-full mb-4">
                   President
                 </div>
-                <h3 className="text-3xl font-bold text-primary font-heading">
+                <h3 className="text-3xl font-bold text-brand-primary font-heading">
                   Robert W. Lowder
                 </h3>
                 <div className="mt-6 prose prose-lg max-w-none">
-                  <p className="text-gray-700 leading-relaxed">
+                  <p className="text-brand-text leading-relaxed">
                     Rob Lowder has been designing business processes and supporting software 
                     for the medical and insurance industries for over twenty years. Clients include 
                     managed care organizations, medical providers, service industry providers and 
@@ -77,12 +93,12 @@ export default function AboutPage() {
                     Mr. Lowder has designed systems ranging from pharmacy card plans to 
                     primary/specialty order entry.
                   </p>
-                  <p className="text-gray-700 leading-relaxed">
+                  <p className="text-brand-text leading-relaxed">
                     Mr. Lowder has been focused on assisting a wide range of clients with their 
                     medical insurance compliance programs as Compliance Officer and President 
                     of Compliante Solutions, Inc.
                   </p>
-                  <p className="text-gray-700 leading-relaxed">
+                  <p className="text-brand-text leading-relaxed">
                     Mr. Lowder is a graduate of the University of Florida with a BSBA degree in 
                     Economics. Postgraduate studies conducted at The George Washington 
                     University and Old Dominion University respectively, included Industrial 
@@ -96,7 +112,7 @@ export default function AboutPage() {
                     href="https://www.linkedin.com/in/robert-w-lowder-91135a14/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-secondary hover:text-primary transition-colors font-medium"
+                    className="inline-flex items-center gap-2 text-brand-secondary hover:text-brand-primary transition-colors font-medium"
                   >
                     <Linkedin className="h-5 w-5" />
                     Connect on LinkedIn

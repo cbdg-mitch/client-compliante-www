@@ -5,10 +5,12 @@ import { Container } from "@/components/container";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { TrustBand } from "@/components/trust-band";
-import LogoCloud from "@/components/logo-cloud";
 import { PartnerCard } from "@/components/partner-card";
 import { CTA } from "@/components/cta";
-import { getPartners } from "@/lib/content";
+import { Testimonials } from "@/components/testimonials";
+import { Values } from "@/components/values";
+import { FeatureSection } from "@/components/feature-section";
+import { getPartners, getTestimonials } from "@/lib/content";
 import { Shield, TrendingUp, AlertTriangle } from "lucide-react";
 
 const pillars = [
@@ -33,7 +35,10 @@ const pillars = [
 ];
 
 export default async function HomePage() {
-  const partners = await getPartners();
+  const [partners, testimonials] = await Promise.all([
+    getPartners(),
+    getTestimonials(),
+  ]);
 
   return (
     <>
@@ -85,13 +90,36 @@ export default async function HomePage() {
         </Container>
       </Section>
 
-      <LogoCloud 
-        logos={partners.map((p) => ({
-          src: p.logo,
-          alt: `${p.name} logo`,
-          href: `/partners/${p.slug}`,
-        }))}
-      />
+      <Values />
+
+      {/* Story section with imagery */}
+      <Section>
+        <Container>
+          <FeatureSection
+            title="From compliance to performance"
+            body="We align compliance, risk, and revenue operations into one operating model. The result is fewer findings, faster documentation cycles, and better financial outcomes—without burnout."
+            imageSrc="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=1200&auto=format&fit=crop"
+            imageAlt="Healthcare team collaborating"
+            bullets={[
+              "Decrease audit findings and rework",
+              "Tighten documentation and coding",
+              "Operationalize best practices across teams",
+            ]}
+          />
+        </Container>
+      </Section>
+
+      {/* Testimonials */}
+      <Section className="bg-white border-t border-brand-primary/10">
+        <Container>
+          <Testimonials
+            items={testimonials}
+            subtitle="Real outcomes from healthcare leaders we support"
+          />
+        </Container>
+      </Section>
+
+      {/* Single source of partner logos lives on /partners to avoid duplication on the homepage */}
 
       {/* Partners Preview */}
       <Section>

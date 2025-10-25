@@ -23,23 +23,23 @@ export function Hero({
   ctaSecondary,
 }: HeroProps) {
   return (
-    <section className="relative isolate overflow-hidden">
-      {/* Background with brand overlay */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-brand-primary/70 via-brand-primary/40 to-brand-primary/10" />
+    <section className="relative isolate overflow-hidden bg-white border-b-4 border-brand-secondary">
+      {/* Subtle accent decoration */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-brand-primary/3 via-transparent to-brand-secondary/3" />
       
       <Container>
         <div className="py-24 sm:py-32">
           <div className="mx-auto max-w-2xl text-center">
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight font-heading">
+            <h1 className="text-4xl sm:text-5xl font-extrabold text-brand-primary tracking-tight font-heading">
               {title}
             </h1>
             {subtitle && (
-              <p className="mt-6 text-xl text-white/90 leading-relaxed">
+              <p className="mt-6 text-xl text-brand-text leading-relaxed">
                 {subtitle}
               </p>
             )}
             {support && (
-              <p className="mt-4 text-lg text-white/80">
+              <p className="mt-4 text-lg text-brand-text/80">
                 {support}
               </p>
             )}

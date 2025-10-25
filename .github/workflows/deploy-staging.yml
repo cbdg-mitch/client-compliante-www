@@ -1,0 +1,89 @@
+name: Deploy to Staging
+
+on:
+  push:
+    branches:
+      - staging
+
+jobs:
+  deploy:
+    name: Deploy to Staging Server
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Doppler CLI
+        uses: dopplerhq/cli-action@v3
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build application
+        env:
+          DOPPLER_TOKEN: ${{ secrets.DOPPLER_TOKEN_STG }}
+        run: doppler run -- npm run build
+
+      - name: Deploy to staging server
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+        run: |
+          # Setup SSH
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H $SSH_HOST >> ~/.ssh/known_hosts
+
+          # Create release directory
+          RELEASE_DIR="/srv/www/clients/compliantesolutions/stg/releases/$(date +%Y%m%d%H%M%S)"
+          
+          # Create directory structure on server
+          ssh -i ~/.ssh/deploy_key $SSH_USER@$SSH_HOST "mkdir -p $RELEASE_DIR"
+
+          # Copy built files
+          scp -i ~/.ssh/deploy_key -r .next package.json package-lock.json public $SSH_USER@$SSH_HOST:$RELEASE_DIR/
+
+          # Deploy and restart
+          ssh -i ~/.ssh/deploy_key $SSH_USER@$SSH_HOST << 'EOF'
+            set -e
+            
+            # Install dependencies in release directory
+            cd $RELEASE_DIR
+            npm ci --production
+            
+            # Update symlink
+            ln -sfn $RELEASE_DIR /srv/www/clients/compliantesolutions/stg/current
+            
+            # Install/update PM2 if needed
+            if ! command -v pm2 &> /dev/null; then
+              npm install -g pm2
+            fi
+            
+            # Start/restart application with Doppler
+            cd /srv/www/clients/compliantesolutions/stg/current
+            doppler run --token=${{ secrets.DOPPLER_TOKEN_STG }} --command="pm2 restart compliantesolutions-staging || pm2 start npm --name compliantesolutions-staging -- start"
+            
+            # Save PM2 process list
+            pm2 save
+            
+            # Cleanup old releases (keep last 5)
+            cd /srv/www/clients/compliantesolutions/stg/releases
+            ls -t | tail -n +6 | xargs -r rm -rf
+          EOF
+
+      - name: Verify deployment
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+        run: |
+          ssh -i ~/.ssh/deploy_key $SSH_USER@$SSH_HOST "pm2 list | grep compliantesolutions-staging"

@@ -24,13 +24,13 @@ export default async function ServicesPage() {
 
   return (
     <>
-      <Section className="bg-gradient-to-br from-brand-primary/5 via-white to-brand-secondary/5 py-20">
+      <Section className="bg-white border-b-4 border-brand-secondary py-20">
         <Container>
           <div className="max-w-3xl">
             <h1 className="text-4xl font-bold tracking-tight text-brand-primary sm:text-5xl font-heading">
               Complete Healthcare Solutions
             </h1>
-            <p className="mt-6 text-xl text-brand-text/80 leading-relaxed">
+            <p className="mt-6 text-xl text-brand-text leading-relaxed">
               We align compliance, risk, and financial performance to create sustainable, 
               high-performing healthcare organizations. Every service we provide is designed 
               to strengthen your practice and improve outcomes.

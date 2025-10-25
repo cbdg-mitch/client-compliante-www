@@ -14,7 +14,7 @@ export default function TermsPage() {
       <Container>
         <Prose>
           <h1>Terms of Service</h1>
-          <p className="text-sm text-gray-500">Last updated: October 21, 2025</p>
+          <p className="text-sm text-brand-text/70">Last updated: October 21, 2025</p>
 
           <h2>Acceptance of Terms</h2>
           <p>

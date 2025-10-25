@@ -4,6 +4,7 @@ import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { organizationSchema } from "@/lib/schema";
+import { FloatingCTA } from "@/components/floating-cta";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -75,6 +76,7 @@ export default function RootLayout({
         <main id="main-content" className="flex-1">
           {children}
         </main>
+        <FloatingCTA />
         <SiteFooter />
       </body>
     </html>

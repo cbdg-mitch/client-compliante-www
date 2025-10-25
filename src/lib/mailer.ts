@@ -1,6 +1,5 @@
 // lib/mailer.ts
-// Simple email sending abstraction
-// In production, integrate with SendGrid, Resend, or similar
+// Email sending via Mailgun API
 
 export interface ContactFormData {
   name: string;
@@ -10,51 +9,56 @@ export interface ContactFormData {
 }
 
 export async function sendContactEmail(data: ContactFormData): Promise<boolean> {
-  const toEmail = process.env.CONTACT_TO_EMAIL;
-  
-  if (!toEmail) {
-    console.warn("[mailer] CONTACT_TO_EMAIL not set. Email would be sent to:", data);
-    console.log({
-      to: "(not configured)",
-      from: data.email,
-      subject: `Contact Form: ${data.name}`,
-      body: data.message,
-      serviceArea: data.serviceArea || "Not specified",
-    });
-    return true; // Simulate success in development
+  const apiKey = process.env.MAILGUN_API_KEY;
+  const domain = process.env.MAILGUN_DOMAIN;
+  const toEmail = process.env.CONTACT_TO_EMAIL || "info@compliantesolutions.com";
+  const fromEmail = process.env.CONTACT_FROM_EMAIL || `noreply@${domain}`;
+
+  if (!apiKey || !domain) {
+    console.error("[mailer] MAILGUN_API_KEY or MAILGUN_DOMAIN not configured");
+    return false;
   }
 
-  // TODO: Integrate with actual email service (SendGrid, Resend, Nodemailer, etc.)
-  // Example with fetch to email service API:
-  /*
-  const response = await fetch("https://api.sendgrid.com/v3/mail/send", {
-    method: "POST",
-    headers: {
-      "Authorization": `Bearer ${process.env.SENDGRID_API_KEY}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      personalizations: [{ to: [{ email: toEmail }] }],
-      from: { email: process.env.CONTACT_FROM_EMAIL || "noreply@compliantesolutions.com" },
-      subject: `Contact Form: ${data.name}`,
-      content: [{
-        type: "text/plain",
-        value: `
+  try {
+    const formData = new URLSearchParams();
+    formData.append("from", `Compliante Solutions <${fromEmail}>`);
+    formData.append("to", toEmail);
+    formData.append("subject", `Contact Form Submission: ${data.name}`);
+    formData.append("text", `
 Name: ${data.name}
 Email: ${data.email}
 Service Area: ${data.serviceArea || "Not specified"}
 
 Message:
 ${data.message}
-        `.trim(),
-      }],
-    }),
-  });
 
-  return response.ok;
-  */
+---
+Sent from compliantesolutions.com contact form
+    `.trim());
+    formData.append("h:Reply-To", data.email);
 
-  // For now, just log and return success
-  console.log("[mailer] Would send email:", { to: toEmail, data });
-  return true;
+    const response = await fetch(
+      `https://api.mailgun.net/v3/${domain}/messages`,
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Basic ${Buffer.from(`api:${apiKey}`).toString("base64")}`,
+        },
+        body: formData,
+      }
+    );
+
+    if (!response.ok) {
+      const error = await response.text();
+      console.error("[mailer] Mailgun API error:", error);
+      return false;
+    }
+
+    const result = await response.json();
+    console.log("[mailer] Email sent successfully:", result.id);
+    return true;
+  } catch (error) {
+    console.error("[mailer] Failed to send email:", error);
+    return false;
+  }
 }

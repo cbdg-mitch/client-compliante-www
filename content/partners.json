@@ -2,57 +2,81 @@
   {
     "slug": "alzbetter",
     "name": "AlzBetter",
-    "tagline": "Technology-enabled dementia care solutions",
+    "tagline": "Complete dementia care operating system and training programs",
     "bullets": [
-      "Advanced Dementia Training",
-      "Care Provider Tools & Technology",
-      "Multi-Level Skill Enhancement",
-      "Integrated Care Solutions"
+      "Dementia 360 Training Platform",
+      "Evidence-Based Care Guidelines",
+      "Person-Centered Approach",
+      "Multi-Setting Solutions"
+    ],
+    "content": [
+      "At AlzBetter, we go beyond just training with Dementia 360 – we provide actionable education caregivers can apply in the field, in real time. Our innovative toolkit bridges the gaps between learning, retention and implementation - all leading to measurable improvements in dementia care.",
+      "Dementia 360 gives healthcare professionals more than just lessons – it equips them with tools to reinforce skills and create meaningful change. Our program transforms knowledge into impact through on-demand learning, offering a complete operating system for dementia care.",
+      "Our training has been reviewed by a team of leading physicians, as well as the Alzheimer's Association. Every topic meets evidence-based guidelines for dementia care. The program reduces dependence on dementia experts and allows health care professionals at all levels to offer support, thus increasing the number of people who can be helped.",
+      "AlzBetter serves home care, hospice, palliative care, assisted living, independent living, skilled nursing, health care professionals, payors, and veterans programs. Four of the five most common comorbidities that result in hospital admissions for dementia patients are preventable, and our program offers strategies to identify, manage and prevent them."
     ],
     "logo": "/images/partners/alzbetter-logo.png",
     "seoTitle": "AlzBetter Dementia Care Technology | Compliante Solutions Partner",
-    "seoDescription": "Advanced dementia care solutions through AlzBetter's technology platform. Enhanced training and integrated care tools for healthcare providers."
+    "seoDescription": "Advanced dementia care solutions through AlzBetter's Dementia 360 platform. Evidence-based training and integrated care tools for healthcare providers."
   },
   {
     "slug": "smartfit",
     "name": "SmartFit",
-    "tagline": "Brain health and cognitive fitness programs",
+    "tagline": "Cognitive-motor dual-task brain health training solutions",
     "bullets": [
-      "Cognitive-Physical Training Integration",
-      "Memory & Attention Enhancement",
-      "Executive Function Improvement",
-      "Real-Life Performance Transfer"
+      "Executive Function Training",
+      "Dual-Task Neural Pathway Development",
+      "Real-World Performance Transfer",
+      "Evidence-Based Brain Health"
+    ],
+    "content": [
+      "SMARTfit designs accessible, science-driven, dual task brain and body training experiences that support people of all ages to perform better, recover faster and stay sharper – so they can perform at their best at every stage of life.",
+      "SMARTfit Cognitive-Motor Dual-Task Training (CMDT) helps create and strengthen neural pathways so you can make quicker, smarter decisions, plan and problem solve while moving, execute combined cognitive and motor skills more efficiently, and process what you see faster so you can react faster.",
+      "SMARTfit uniquely excels at challenging the Executive Function domain of the brain through top-down processing. Make quicker and better decisions, solve problems, improve working memory, and enhance cognitive flexibility. All this happens while performing a variety of physical movements and tasks, simulating real life.",
+      "It's this combination of reaction and executive function training that studies reveal leads to greater transference to real-world results than reaction training alone. SMARTfit's gamified dual-task programming delivers rapid transference to real life performance for all ages, abilities, and stages of life - from athletic performance and youth programs to active aging, rehabilitation, and chronic condition management."
     ],
     "logo": "/images/partners/smartfit-logo.png",
     "seoTitle": "SmartFit Brain Health Programs | Compliante Solutions Partner",
-    "seoDescription": "Innovative brain health and cognitive fitness programs through SmartFit. Integrated physical and cognitive training for better outcomes."
+    "seoDescription": "Innovative brain health and cognitive fitness programs through SmartFit. Evidence-based cognitive-motor dual-task training for better outcomes."
   },
   {
     "slug": "healthy-senior-lighting",
-    "name": "Healthy Senior Lighting",
-    "tagline": "Innovative circadian lighting solutions for seniors",
+    "name": "Awaken Blue",
+    "tagline": "Bio-centric circadian lighting solutions for senior care",
     "bullets": [
-      "Circadian Rhythm Support",
-      "Patient Wellbeing Enhancement",
-      "Staff Productivity Optimization",
-      "Smart Control Systems"
+      "Morning Blue-Enriched Light Therapy",
+      "Evening Warm-Tone Programming",
+      "Automated Tunable LED Systems",
+      "Evidence-Based Health Outcomes"
+    ],
+    "content": [
+      "Awaken Blue is a lighting consultancy firm that provides research-backed, bio-centric lighting solutions for commercial settings, including senior care facilities. Our services involve designing and specifying circadian lighting systems for projects to improve the health and productivity of a building's occupants.",
+      "The concept of circadian lighting draws on scientific principles showing that correctly timed exposure to blue-enriched light can positively influence the circadian rhythms of older adults. Research indicates that older adults often have disrupted sleep patterns due to age-related changes in their vision and insufficient exposure to natural daylight.",
+      "Our solutions feature morning blue-enriched white light that mimics bright natural sunlight and helps suppress the sleep hormone melatonin, increasing alertness, improving mood, and strengthening the sleep-wake cycle. Evening warm-toned and dim lighting avoids blue light in the evening hours to prevent melatonin suppression and promote relaxation.",
+      "Implementing innovative circadian lighting offers proven benefits for seniors including improved sleep patterns with earlier bedtimes and less fragmented sleep, enhanced mood and cognitive function through boosted serotonin levels, reduced dementia-related behavioral symptoms like sundowning, and minimized fall risks through improved alertness and visibility. Our systems are being successfully adopted in assisted living, memory care, hospitals, nursing homes, and at-home solutions for independent-living seniors."
     ],
     "logo": "/images/partners/awaken-blue-logo.png",
-    "seoTitle": "Healthy Senior Lighting Circadian Solutions | Compliante Solutions Partner",
-    "seoDescription": "Advanced circadian lighting solutions for senior care facilities. Improve patient wellbeing and staff productivity with smart lighting technology."
+    "seoTitle": "Awaken Blue Circadian Lighting Solutions | Compliante Solutions Partner",
+    "seoDescription": "Advanced bio-centric circadian lighting solutions for senior care facilities. Improve sleep, mood, and safety with evidence-based lighting technology."
   },
   {
     "slug": "rudio",
     "name": "Rudio",
-    "tagline": "Advanced cybersecurity solutions",
+    "tagline": "Advanced cybersecurity solutions built on NIST framework",
     "bullets": [
-      "GDPR Compliant Solutions",
-      "ISO 27001 Certification",
-      "AI-Powered Threat Detection",
-      "24/7 Incident Monitoring"
+      "NIST Cybersecurity Framework",
+      "Zero-Trust Engineering",
+      "Compliance & Auditing",
+      "End-to-End Protection"
+    ],
+    "content": [
+      "Rudio is the trusted leader in delivering advanced technology services to businesses. Our team of experienced professionals specializes in providing end-to-end cybersecurity solutions built on the NIST Cybersecurity Framework, ensuring the highest level of protection and compliance.",
+      "We proudly serve organizations of every size and across all industries, equipped to meet the demanding needs of today's secure IT environments. Our company is committed to providing clients with the highest level of IT services available on the market, taking a no-compromise approach to protecting data, networks, and systems from cyber threats.",
+      "Our comprehensive services include co-managed IT, network security, private cloud solutions, compliance and auditing, penetration testing and vulnerability assessments, zero-trust engineering, and automation and AI integration. We partner with industry-leading technology providers to deliver best-in-class solutions.",
+      "When it comes to cybersecurity for healthcare and other regulated industries, Rudio sets the standard. Our expertise in compliance requirements, coupled with our advanced technical capabilities, makes us the ideal partner for organizations that need robust security infrastructure without compromise."
     ],
     "logo": "/images/partners/rudio-logo.png",
     "seoTitle": "Rudio Healthcare Cybersecurity | Compliante Solutions Partner",
-    "seoDescription": "Advanced cybersecurity solutions for healthcare through Rudio. GDPR compliance, AI threat detection, and 24/7 monitoring."
+    "seoDescription": "Advanced cybersecurity solutions for healthcare built on NIST framework. HIPAA compliance, zero-trust security, and comprehensive protection."
   }
 ]

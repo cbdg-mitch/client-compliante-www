@@ -15,6 +15,7 @@ export type Service = {
   title: string;
   summary: string;
   bullets: string[]; // length 4 recommended
+  content?: string[]; // optional detailed content paragraphs
   seoTitle: string;
   seoDescription: string;
 };
@@ -25,8 +26,15 @@ export type Partner = {
   tagline: string;
   logo: string; // public path to logo
   bullets: string[]; // length 4 recommended
+  content?: string[]; // optional detailed content paragraphs
   seoTitle: string;
   seoDescription: string;
+};
+
+export type Testimonial = {
+  quote: string;
+  author: string;
+  organization?: string;
 };
 
 const root = process.cwd();
@@ -70,6 +78,16 @@ export const getPartners = cache(async (): Promise<Partner[]> => {
 export const getPartnerBySlug = cache(async (slug: PartnerSlug): Promise<Partner | null> => {
   const partners = await getPartners();
   return partners.find((p) => p.slug === slug) ?? null;
+});
+
+/** TESTIMONIALS */
+export const getTestimonials = cache(async (): Promise<Testimonial[]> => {
+  try {
+    const testimonials = await readJSON<Testimonial[]>("testimonials.json");
+    return testimonials;
+  } catch {
+    return [];
+  }
 });
 
 /** COMPANY & BIOS MDX (raw MDX string; render with your MDX component) */

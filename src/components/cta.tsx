@@ -21,14 +21,14 @@ export function CTA({
   secondaryHref,
 }: CTAProps) {
   return (
-    <Section className="bg-gradient-to-r from-brand-primary to-brand-primary/90">
+    <Section className="bg-brand-primary border-t-4 border-brand-secondary">
       <Container>
         <div className="text-center text-white">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-heading">
             {title}
           </h2>
           {description && (
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-white/90">
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-white/95">
               {description}
             </p>
           )}
