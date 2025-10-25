@@ -97,4 +97,4 @@ jobs:
           SSH_HOST: ${{ secrets.SSH_HOST }}
           SSH_USER: ${{ secrets.SSH_USER }}
         run: |
-          ssh -i ~/.ssh/deploy_key $SSH_USER@$SSH_HOST "pm2 list | grep compliantesolutions-staging"
+          ssh -i ~/.ssh/deploy_key $SSH_USER@$SSH_HOST "command -v pm2 >/dev/null 2>&1 && pm2 list | grep compliantesolutions-staging || npx pm2 list | grep compliantesolutions-staging"
