@@ -21,6 +21,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref || '' }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -61,15 +63,16 @@ jobs:
           scp -i ~/.ssh/deploy_key -r .next package.json package-lock.json public $SSH_USER@$SSH_HOST:$RELEASE_DIR/
 
           # Deploy and restart
-          ssh -i ~/.ssh/deploy_key $SSH_USER@$SSH_HOST << 'EOF'
+          ssh -i ~/.ssh/deploy_key $SSH_USER@$SSH_HOST << EOF
             set -e
-            
+            set -u
+
             # Install dependencies in release directory
-            cd $RELEASE_DIR
+            cd "$RELEASE_DIR"
             npm ci --production
             
             # Update symlink
-            ln -sfn $RELEASE_DIR /srv/www/clients/compliantesolutions/prod/current
+            ln -sfn "$RELEASE_DIR" /srv/www/clients/compliantesolutions/prod/current
             
             # Install/update PM2 if needed
             if ! command -v pm2 &> /dev/null; then
